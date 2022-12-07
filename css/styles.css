@@ -309,15 +309,13 @@ padding: 60px 12px;
     background-repeat: no-repeat;
  }
  .objetivos li {
-
-    
+   
     font-family: sans-serif;    
     list-style-type:circle;
     padding:5px;
     margin: 10px;
     text-align:left;
-    font-size:large;
-    
+    font-size:large;    
  }
  #servicios .container .letters{
     text-align:center;
@@ -358,49 +356,65 @@ padding: 60px 12px;
  }
  .servicios {
     display: flex;
-       flex-direction: column;
+    flex-direction: column;
     align-items: center;
  }
- .aliado{
-    width: 80%;
-    max-width:400px;
-    margin: auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
+ .aliados{ 
+ 
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 100px;
-    column-gap: 40px;
-    row-gap: 40px;
+    grid-template-columns: auto auto auto ;
+    justify-content:center;
+    margin: 20px;     
+    text-align:center;
+    height: 350px;
+    overflow-x:hidden;
+    border: 1px solid rgb(187, 238, 185);;
+    
+ }
+ .aliados:hover{
+    
+    transition: all 500ms;
+    box-shadow: 2px 2px  yellow;
+  }
+ 
+ .aliado img
+ {  
+    width: 100px;
+    height:100px;
+    
 
+    
  }
- .aliado .box-img figure {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+ .a0{
+    margin: 25px;
+    grid-column: 1/4;
  }
- .aliado .box-img img {  
-    display:flex;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+ .a1{
+    grid-column: 2/3;
+    
  }
-
+ .a2{
+   
+    grid-column: 2/3;
+    
+ }
+ .a2 img{
+    border-radius: 20%;
+ }
   .description
 {   color: blueviolet;    
     display: flex;
     grid-template-rows: 1x;
-    justify-content: center;
-    
+    justify-content: center;    
     font-size: medium;   
 }
-figure:hover
-{   transition: 500ms;
-    transform: scale(1.5);
-    background-color: rgb(187, 238, 185);
-    border-radius: 50%;
-    border: 1px solid;
-    border-color: #32ad1f;  
+figure:hover img
+{   transition: 500ms;   
+    transform: scale(1.1);
+    box-shadow: 1px 1px  #00f815;
+    border-radius: 5%;
+  
+ 
 }
 .grid-info{
     display: grid;  
@@ -417,6 +431,7 @@ figure:hover
 .box {
     margin-top: 10px;
     text-align: center;
+    
    
 
   }
@@ -451,6 +466,7 @@ justify-content: center;
     background-position:center center;
     background-repeat: no-repeat;
 }
+
 
 
 .box:hover p{
@@ -632,7 +648,21 @@ justify-content: center;
                 background-size:contain;           
                              
           }
-          
+          .aliado img
+          {  
+            padding: 30px;
+             width: 250px;
+             height:250px;
+             
+          }
+          .a1{
+            grid-column:1/2;
+            
+         }
+         .a2{
+           grid-column:3/4;
+            
+         }
           
 
           .grid-info{
