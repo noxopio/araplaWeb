@@ -1,3 +1,12 @@
+window.onload=function(){
+   $('#onload').fadeOut();
+   $('body').removeClass('hidden');
+
+
+}
+
+
+
 
 
 let hideText_btn=document.getElementById("hideText_btn");
