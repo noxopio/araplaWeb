@@ -1,5 +1,5 @@
 # araplaWeb
-https://arapla.netlify.app/
+https://arapla.com/
 
 
 
