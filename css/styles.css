@@ -101,7 +101,28 @@ body::-webkit-scrollbar-thumb {
 
 /* end loader */
 
+.progess {
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(137, 43, 226, 0.377);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation-name: progress;
+    animation-timeline: scroll();
+}
+
+@keyframes progress {
+    100% {
+
+        transform: scaleX(1);
+
+    }
+
+}
 
 h1 {
     font-size: 3.5em;
