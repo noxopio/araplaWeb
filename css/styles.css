@@ -377,17 +377,7 @@ header a:hover {
 }
 
 /* estilos footer*/
-footer #arapla {
-    margin: 0;
-    padding: 1px 10px;
-    font-weight: bold;
-    color: rgb(185, 255, 215);
-    font-size: 2em;
-    box-shadow: 1px 1px 20px greenyellow;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 footer #arapla {
     margin: 0;
