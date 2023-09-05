@@ -30,11 +30,63 @@ body::-webkit-scrollbar-thumb {
 
 /* loader */
 
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgb(43, 255, 5);
+    background:/* center / contain no-repeat url("/img/logo.png"), */radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(92,251,63,0.9332107843137255) 47%, rgba(233,233,233,0.9332107843137255) 94%);
+
+
+
+
+
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+  
+  #overlay-text  h1 {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin: auto 0;
+    white-space: nowrap;
+    font-size: 10rem;
+    color: #fffdfd;
+      -webkit-text-stroke: 3px rgb(11, 122, 46);
+  color: transparent;
+    
+  }
+
+  
+  @media (max-width: 720px) {
+    #overlay-text {
+      white-space: nowrap;
+      font-size: 8rem;
+     
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+    }
+  }
+
+
+
 .hidden {
+    display: hide;
+   
     overflow: hidden;
 }
 
-.loader {
+/* .loader {
 
     height: 100vh;
     display: grid;
@@ -98,7 +150,7 @@ body::-webkit-scrollbar-thumb {
         opacity: 0;
     }
 }
-
+ */
 /* end loader */
 
 .progess {
@@ -108,7 +160,7 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     width: 100%;
     height: 20px;
-    background-color: rgba(137, 43, 226, 0.377);
+    background-color: rgba(49, 226, 43, 0.377);
     transform: scaleX(0);
     transform-origin: left;
     animation-name: progress;
@@ -425,7 +477,7 @@ footer .social-icons .social-icon:hover {
 
 #somos-arapla .container .text:hover {
     transition: 1s ease;
-    background-color: rgb(187, 238, 185);
+    background-color: #bbeeb9;
     border-radius: 10px;
 }
 

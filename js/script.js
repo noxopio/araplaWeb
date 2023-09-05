@@ -1,9 +1,21 @@
-window.onload = function () {
+/* window.onload = function () {
    $('#onload').fadeOut();
-   $('body').removeClass('hidden');
+  $('body').removeClass('hidden');
+
+}  */
+'use strict'
+
+const body = document.querySelector("body");
+
+const overlay = document.querySelector("#overlay");
+overlay.addEventListener('click', of)
+function of() {
+    overlay.style.display = "none";
+    body.classList.remove("hidden");
+
+};
 
 
-}
 
 
 
