@@ -72,7 +72,7 @@ body::-webkit-scrollbar-thumb {
     white-space: nowrap;
     font-size: 10rem;
     color: #fffdfd;
-    -webkit-text-stroke: 1px rgb(11, 122, 46);
+    -webkit-text-stroke: 1px rgb(226, 226, 226);
     color: whitesmoke;
     
 
@@ -82,10 +82,11 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 720px) {
     #overlay-text {
         white-space: nowrap;
-        font-size: 8rem;
-
+        font-size: 6rem;
+        -webkit-text-stroke: 1px rgb(226, 226, 226);
         writing-mode: vertical-lr;
         text-orientation: upright;
+        color: whitesmoke;
     }
 }
 
