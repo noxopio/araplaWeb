@@ -81,7 +81,7 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 720px) {
     #overlay-text {
         white-space: nowrap;
-        font-size: 4rem;
+        font-size: 2rem;
        
         writing-mode: vertical-lr;
         text-orientation: upright;
