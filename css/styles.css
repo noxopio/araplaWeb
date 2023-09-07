@@ -71,7 +71,6 @@ body::-webkit-scrollbar-thumb {
     margin: auto 0;
     white-space: nowrap;
     font-size: 10rem;
-      -webkit-text-stroke: 1px rgb(255, 255, 255);
     color: rgb(0, 184, 76);
     
 
