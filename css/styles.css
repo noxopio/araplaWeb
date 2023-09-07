@@ -83,7 +83,7 @@ body::-webkit-scrollbar-thumb {
     #overlay-text {
         white-space: nowrap;
         font-size: 6rem;
-        -webkit-text-stroke: 1px rgb(226, 226, 226);
+        -webkit-text-stroke: 1px rgba(226, 226, 226, 0);
         writing-mode: vertical-lr;
         text-orientation: upright;
         color: whitesmoke;
