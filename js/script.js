@@ -10,8 +10,9 @@ const body = document.querySelector("body");
 const overlay = document.querySelector("#overlay");
 overlay.addEventListener('click', of)
 function of() {
-    overlay.style.display = "none";
-    body.classList.remove("hidden");
+   overlay.style.display = "none";
+
+   body.classList.remove("hidden");
 
 };
 
@@ -31,7 +32,7 @@ hideText_btn.addEventListener("click", toggleText);
 
 
 function toggleText() {
-   
+
    hideText.classList.toggle("show");
 
    if (hideText.classList.contains("show")) {
@@ -97,7 +98,7 @@ hideText_btn3.addEventListener("click", toggleText3);
 function toggleText3() {
 
    hideText3.classList.toggle("show");
-   
+
    hideText1.classList.remove("show");
    hideText2.classList.remove("show");
 

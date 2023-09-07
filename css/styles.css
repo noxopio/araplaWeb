@@ -32,57 +32,68 @@ body::-webkit-scrollbar-thumb {
 
 
 #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: block; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
+    position: fixed;
+    /* Sit on top of the page content */
+    display: block;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 
     background: rgb(43, 255, 5);
-    background:/* center / contain no-repeat url("/img/logo.png"), */radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(92,251,63,0.9332107843137255) 47%, rgba(233,233,233,0.9332107843137255) 94%);
+    background:
+        /* center / contain no-repeat url("/img/logo.png"), */
+        radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(92, 251, 63, 0.9332107843137255) 47%, rgba(233, 233, 233, 0.9332107843137255) 94%);
+
+
+        
 
 
 
+    z-index: 3;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    transition: 10s ease;
+    /* Add a pointer on hover */
+}
 
-
-    z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
-  }
-  
-  #overlay-text  h1 {
+#overlay-text h1 {
     position: absolute;
     text-align: center;
     top: 50%;
-    left:50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     margin: auto 0;
     white-space: nowrap;
     font-size: 10rem;
     color: #fffdfd;
-      -webkit-text-stroke: 3px rgb(11, 122, 46);
-  color: transparent;
+    -webkit-text-stroke: 1px rgb(11, 122, 46);
+    color: whitesmoke;
     
-  }
 
-  
-  @media (max-width: 720px) {
+}
+
+
+@media (max-width: 720px) {
     #overlay-text {
-      white-space: nowrap;
-      font-size: 8rem;
-     
-      writing-mode: vertical-lr;
-      text-orientation: upright;
+        white-space: nowrap;
+        font-size: 8rem;
+
+        writing-mode: vertical-lr;
+        text-orientation: upright;
     }
-  }
+}
 
 
 
 .hidden {
     display: hide;
-   
+
     overflow: hidden;
 }
 
@@ -577,7 +588,7 @@ footer .social-icons .social-icon:hover {
     height: 350px;
     overflow-x: hidden;
     border: 1px solid rgb(187, 238, 185);
-    
+
 
 }
 
