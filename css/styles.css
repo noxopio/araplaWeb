@@ -970,19 +970,16 @@ figure:hover img {
     /* font-size: 14px; */
     color: #32ad1f;
     /* font-weight: bold; */
-    background-color: #bbeeb9;
+    /* background-color: #bbeeb9; */
     padding: 10px;
     border: 1px solid purple; 
 }
-
 .pdf:focus {
-    
     color: #32ad1f;
     border-radius: 8px;
-    border: 1px solid purple; 
-    background-color: #bbeeb9;
+    border: 2px solid purple; 
+    /* background-color: #bbeeb9; */
     padding: 10px;
-
 }
 
 
@@ -1030,7 +1027,7 @@ figure:hover img {
 
 .close-btn:hover,
 .close-btn:focus {
-    color: whitesmoke;
+    color:purple;
     text-decoration: none;
     cursor: pointer;
 }
