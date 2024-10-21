@@ -55,7 +55,7 @@ function toggleText1() {
    hideText1.classList.toggle("show");
    hideText2.classList.remove("show");
    hideText3.classList.remove("show");
-
+   hideText4.classList.remove("show");
 
    if (hideText1.classList.contains("show")) {
 
@@ -77,7 +77,7 @@ function toggleText2() {
    hideText2.classList.toggle("show");
    hideText1.classList.remove("show");
    hideText3.classList.remove("show");
-
+   hideText4.classList.remove("show");
 
 
 
@@ -98,7 +98,7 @@ hideText_btn3.addEventListener("click", toggleText3);
 function toggleText3() {
 
    hideText3.classList.toggle("show");
-
+   hideText4.classList.remove("show");
    hideText1.classList.remove("show");
    hideText2.classList.remove("show");
 
@@ -108,6 +108,28 @@ function toggleText3() {
    }
    else {
       hideText_btn3.innerText = "+Info"
+   }
+
+}
+let hideText_btn4 = document.getElementById("hideText_btn4");
+
+let hideText4 = document.getElementById("hideText4");
+
+hideText_btn4.addEventListener("click", toggleText4);
+function toggleText4() {
+
+   hideText4.classList.toggle("show");
+   hideText3.classList.remove("show");
+
+   hideText1.classList.remove("show");
+   hideText2.classList.remove("show");
+
+   if (hideText4.classList.contains("show")) {
+      hideText_btn4.innerText = "-Info";
+
+   }
+   else {
+      hideText_btn4.innerText = "+Info"
    }
 
 }
