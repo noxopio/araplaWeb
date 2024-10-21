@@ -956,15 +956,12 @@ figure:hover img {
         padding: 40px;
         margin-top: 20px;
     }
-
 }
-
 
 .pdf {
     text-decoration: none;
-    color:purple;
+    color: purple;
     font-size: 16px;
-
 }
 
 .pdf:hover {
@@ -972,7 +969,8 @@ figure:hover img {
     color: #32ad1f;
     font-weight: bold;
 }
-.pdf:focus{
+
+.pdf:focus {
     border-radius: 8px;
     background-color: #bbeeb9;
     padding: 2px;
