@@ -17,11 +17,6 @@ function of() {
 };
 
 
-
-
-
-
-
 let hideText_btn = document.getElementById("hideText_btn");
 
 let hideText = document.getElementById("hideText");
@@ -134,22 +129,22 @@ function toggleText4() {
 
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
    // Abrir el popup cuando se hace clic en "Documentos"
-   $('.menu .redes a[href="#documentos"]').click(function(event) {
-       event.preventDefault(); // Evita que se recargue la página
-       $('#popup-documentos').fadeIn(); // Muestra el popup
+   $('.menu .redes a[href="#documentos"]').click(function (event) {
+      event.preventDefault(); // Evita que se recargue la página
+      $('#popup-documentos').fadeIn(); // Muestra el popup
    });
 
    // Cerrar el popup cuando se hace clic en el botón de cerrar
-   $('.close-btn').click(function() {
-       $('#popup-documentos').fadeOut(); // Oculta el popup
+   $('.close-btn').click(function () {
+      $('#popup-documentos').fadeOut(); // Oculta el popup
    });
 
    // Cerrar el popup si se hace clic fuera del contenido
-   $(window).click(function(event) {
-       if ($(event.target).is('#popup-documentos')) {
-           $('#popup-documentos').fadeOut(); // Oculta el popup
-       }
+   $(window).click(function (event) {
+      if ($(event.target).is('#popup-documentos')) {
+         $('#popup-documentos').fadeOut(); // Oculta el popup
+      }
    });
 });
