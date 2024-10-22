@@ -967,10 +967,14 @@ figure:hover img {
     text-decoration: none;
     color: purple;
     font-size: 16px;
+    border: 1px solid transparent ;
+    padding: 10px;
+    border-radius: 8px ;
 }
 
 .pdf:hover {
     border-radius: 8px ;
+    transition: 500ms ease-in;
     /* font-size: 14px; */
     color: #32ad1f;
     /* font-weight: bold; */
