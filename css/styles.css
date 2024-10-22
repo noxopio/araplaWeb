@@ -31,6 +31,8 @@ body::-webkit-scrollbar-thumb {
 /*  list */
 .uppercase {
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
     padding: 16px;
 }
 
@@ -83,7 +85,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-@media (max-width: 720px) {
+@media (max-width: 979px) {
     #overlay-text {
         white-space: nowrap;
         font-size: 2rem;
@@ -722,11 +724,13 @@ figure:hover img {
 }
 
 .b4 ul li {
-    color: white;
+    color: blueviolet;
     line-height: 30px;
     font-size: 15px;
+    padding-inline: 8px;
+    box-shadow: 1px 1px 20px greenyellow;
     border-radius: 8px;
-    background-color: #000000;
+    background: linear-gradient(160deg, rgba(80, 218, 87, 0.295) 0%, rgba(183, 235, 171, 0.6) 74%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 /* menu   boton flotante */
@@ -809,7 +813,7 @@ figure:hover img {
 
 /* version dekstop */
 
-@media (min-width: 720px) {
+@media (min-width: 980px) {
     header {
         height: 150px;
 
