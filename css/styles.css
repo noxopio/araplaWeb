@@ -1051,3 +1051,65 @@ figure:hover img {
     font-family: sans-serif;
     margin: 10px;
 }
+
+/* Estilos para el formulario PQR */
+#form-pqr .form-group {
+    margin-bottom: 16px;
+}
+#form-pqr .form-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#form-pqr .col {
+    flex: 1 1 120px;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+#form-pqr label {
+    font-size: 1.4em;
+    color: #039e32;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+#form-pqr .form-control {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1.2em;
+    border: 1.5px solid #32ad1f;
+    border-radius: 6px;
+    background: #f8fff8;
+    margin-bottom: 2px;
+    transition: border 0.3s;
+}
+#form-pqr .form-control:focus {
+    border: 2px solid #7b0580;
+    outline: none;
+    background: #eaffea;
+}
+#form-pqr textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+    max-height: 200px;
+}
+#form-pqr .form-group.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    #form-pqr .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    #form-pqr .col {
+        min-width: 100%;
+        align-items: stretch;
+    }
+}

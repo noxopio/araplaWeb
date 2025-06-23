@@ -148,3 +148,44 @@ $(document).ready(function () {
       }
    });
 });
+
+// PQR Modal y validación
+$(document).ready(function () {
+    // Abrir modal PQR
+    $('#btn-pqr').click(function () {
+        $('#modal-pqr').fadeIn();
+    });
+    // Cerrar modal PQR
+    $('#close-pqr').click(function () {
+        $('#modal-pqr').fadeOut();
+    });
+    $(window).click(function (event) {
+        if ($(event.target).is('#modal-pqr')) {
+            $('#modal-pqr').fadeOut();
+        }
+    });
+   
+});
+
+// Manejo organizado de botones del formulario PQR
+const pqrButtons = {
+    enviar: document.getElementById('pqr-enviar'),
+    limpiar: document.getElementById('pqr-limpiar')
+};
+
+$(document).ready(function () {
+    // Limpiar formulario al hacer click en el botón Limpiar
+    if (pqrButtons.limpiar) {
+        pqrButtons.limpiar.addEventListener('click', function () {
+            document.getElementById('form-pqr').reset();
+        });
+    }
+    // Limpiar formulario al enviar
+    if (pqrButtons.enviar) {
+        document.getElementById('form-pqr').addEventListener('submit', function () {
+            setTimeout(function () {
+                document.getElementById('form-pqr').reset();
+            }, 100);
+        });
+    }
+});

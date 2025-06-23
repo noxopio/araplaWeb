@@ -47,6 +47,7 @@
                 <a href="#somos-arapla">¿Quiénes somos?</a>
                 <a href="#serv">Nuestros Servicios</a>
                 <a href="#whatsapp">Contacta con nosotros</a>
+                <button id="btn-pqr" class="pqr-btn">PQR</button>
 
 
             </nav>
@@ -103,7 +104,7 @@
 
     </section>
 
-</section>
+    </section>
     <section id="servicios">
         <div class="container">
             <div class="servicio">
@@ -194,7 +195,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="serv">
         <div class="container">
             <div class="image-container"></div>
@@ -217,7 +218,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="Aliados" class="aliados">
         <h3 class="aliado a0">EMPRESAS ALIADAS </h3>
         <figure class="aliado a1"><img src="./img/planeta-futuro.png" alt="" title="PLANETA-FUTURO-SAS"></figure>
@@ -225,21 +226,17 @@
         <!-- <figure class="aliado a1"><img src="./img/planeta-futuro.png" alt=""></figure> -->
     </section>
     <section id="ubicacion" class="ubicacion">
-            <h3 class="ubicacion_tittle a0">UBICACIÓN</h3>
-                <section id="mapa" style="width:100%;max-width:900px;margin:auto;">
-              
-                    <iframe 
-                        src="https://www.google.com/maps/d/u/0/embed?mid=1HKrr8TD9kfZE4pa9rI-8bK4Za5RJq0w&ehbc=2E312F&ll=4.672569237301918%2C-74.126071&z=11" 
-                        width="100%" 
-                        height="480" 
-                        style="border:10;border-radius:20px;" 
-                        allowfullscreen="" 
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </section>
-                
-            
+        <h3 class="ubicacion_tittle a0">UBICACIÓN</h3>
+        <section id="mapa" style="width:100%;max-width:900px;margin:auto;">
+
+            <iframe
+                src="https://www.google.com/maps/d/u/0/embed?mid=1HKrr8TD9kfZE4pa9rI-8bK4Za5RJq0w&ehbc=2E312F&ll=4.672569237301918%2C-74.126071&z=11"
+                width="100%" height="480" style="border:10;border-radius:20px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+
     </section>
 
     <footer>
@@ -323,33 +320,92 @@
     <div id="popup-documentos" class="popup">
         <div class="popup-content">
             <span class="close-btn ">&times;</span>
-                <h2 >Documentos</h3>
-            <ul class="documentos">
-                <li class="uppercase">
-                    <a class="pdf  " href="/doc/CONCEPTO_DE_LEGALIDAD.pdf" target="_blank">
-                        Concepto de Legalidad </a>
-                </li>
-                <li class="uppercase  ">
-                    <a class="pdf " href="/doc/Diagrama_De_Flujo_arapla.pdf" target="_blank">
-                        Diagrama de Flujo
-                    </a>
-                </li>
-                <li class="uppercase">
-                    <a class="pdf  " href="/doc/portafolio_de_servicios.pdf" target="_blank">
-                        Portafolio de Servicios
-                    </a>
-                </li>
-                <li class="uppercase">
-                    <a class="pdf  " href="/doc/INFORME_TONELADAS_APROVECHADAS.pdf" target="_blank">
-                        INFORME TONELADAS APROVECHADAS
-                    </a>
-                </li>
-                <li class="uppercase">
-                    <a class="pdf  " href="/doc/Programa_pqr.pdf" target="_blank">
-                        Programa pqr
-                    </a>
-                </li>
-            </ul>
+            <h2>Documentos</h3>
+                <ul class="documentos">
+                    <li class="uppercase">
+                        <a class="pdf  " href="/doc/CONCEPTO_DE_LEGALIDAD.pdf" target="_blank">
+                            Concepto de Legalidad </a>
+                    </li>
+                    <li class="uppercase  ">
+                        <a class="pdf " href="/doc/Diagrama_De_Flujo_arapla.pdf" target="_blank">
+                            Diagrama de Flujo
+                        </a>
+                    </li>
+                    <li class="uppercase">
+                        <a class="pdf  " href="/doc/portafolio_de_servicios.pdf" target="_blank">
+                            Portafolio de Servicios
+                        </a>
+                    </li>
+                    <li class="uppercase">
+                        <a class="pdf  " href="/doc/INFORME_TONELADAS_APROVECHADAS.pdf" target="_blank">
+                            INFORME TONELADAS APROVECHADAS
+                        </a>
+                    </li>
+                    <li class="uppercase">
+                        <a class="pdf  " href="/doc/Programa_pqr.pdf" target="_blank">
+                            Programa pqr
+                        </a>
+                    </li>
+                </ul>
+        </div>
+    </div>
+
+    <div id="modal-pqr" class="popup">
+        <div class="popup-content" style="max-width: 500px;">
+            <span class="close-btn" id="close-pqr">&times;</span>
+            <h2>Formulario PQR</h2>
+            <form id="form-pqr" autocomplete="off" target="_blank" action="https://formsubmit.co/dark.tempus@gmail.com"
+                method="POST">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="pqr-nombre">Nombre</label>
+                            <input type="text" name="nombre" id="pqr-nombre" class="form-control" placeholder="Nombre"
+                                required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,60}$" maxlength="60"
+                                title="Solo letras y espacios" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <label for="pqr-apellido">Apellidos</label>
+                            <input type="text" name="apellido" id="pqr-apellido" class="form-control"
+                                placeholder="Apellidos" required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,60}$" maxlength="60"
+                                title="Solo letras y espacios" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <label for="pqr-email">Correo electrónico</label>
+                            <input type="email" name="email" id="pqr-email" class="form-control"
+                                placeholder="Correo electrónico" required maxlength="60" title="Correo válido"
+                                autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pqr-id">Número de identificación</label>
+                    <input type="text" name="identificacion" id="pqr-id" class="form-control"
+                        placeholder="Número de identificación" required pattern="^[0-9]{5,15}$" maxlength="15"
+                        title="Solo números" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="pqr-direccion">Dirección de residencia</label>
+                    <input type="text" name="direccion" id="pqr-direccion" class="form-control"
+                        placeholder="Dirección de residencia" required pattern="^[A-Za-z0-9#\-. ]{5,80}$" maxlength="80"
+                        title="Letras, números, #, - y ." autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="pqr-telefono">Teléfono de contacto</label>
+                    <input type="text" name="telefono" id="pqr-telefono" class="form-control"
+                        placeholder="Teléfono de contacto" required pattern="^[0-9]{7,15}$" maxlength="15"
+                        title="Solo números" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="pqr-mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="pqr-mensaje" class="form-control" placeholder="Mensaje" required
+                        minlength="1" maxlength="500" rows="5" style="width:100%;height:80px;"></textarea>
+                </div>
+                <div class="form-group button-group">
+                    <button type="submit" id="pqr-enviar" class="btn btn-lg btn-dark btn-block">Enviar</button>
+                    <button type="button" id="pqr-limpiar" class="btn btn-lg btn-dark btn-block">Limpiar</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
