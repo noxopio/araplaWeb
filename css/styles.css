@@ -52,17 +52,10 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     right: 0;
     bottom: 0;
-
-    background: rgb(43, 255, 5);
+    /* background: rgb(43, 255, 5); */
     background:
-        /* center / contain no-repeat url("/img/logo.png"), */
+        center / contain no-repeat url(../img/green.svg),
         radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(92, 251, 63, 0.9332107843137255) 47%, rgba(233, 233, 233, 0.9332107843137255) 94%);
-
-
-
-
-
-
     z-index: 3;
     /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer;
@@ -76,11 +69,12 @@ body::-webkit-scrollbar-thumb {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    filter: contrast(1.5);
     margin: auto 0;
     white-space: nowrap;
     font-size: 10rem;
     color: rgb(0, 184, 76);
-
+    filter: drop-shadow(2px 4px 6px white);
 
 }
 
@@ -967,25 +961,26 @@ figure:hover img {
     text-decoration: none;
     color: purple;
     font-size: 16px;
-    border: 1px solid transparent ;
+    border: 1px solid transparent;
     padding: 10px;
-    border-radius: 8px ;
+    border-radius: 8px;
 }
 
 .pdf:hover {
-    border-radius: 8px ;
+    border-radius: 8px;
     transition: 500ms ease-in;
     /* font-size: 14px; */
     color: #32ad1f;
     /* font-weight: bold; */
     /* background-color: #bbeeb9; */
     padding: 10px;
-    border: 1px solid purple; 
+    border: 1px solid purple;
 }
+
 .pdf:focus {
     color: #32ad1f;
     border-radius: 8px;
-    border: 2px solid purple; 
+    border: 2px solid purple;
     /* background-color: #bbeeb9; */
     padding: 10px;
 }
@@ -1001,7 +996,7 @@ figure:hover img {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color:rgb(255 255 255 / 86%);
+    background-color: rgb(255 255 255 / 86%);
     border-radius: 10px;
     transition: 1s ease;
 }
@@ -1009,7 +1004,7 @@ figure:hover img {
 .popup-content {
     gap: 10px;
     display: flex;
-    background-color:rgb(255 255 255 / 63%);
+    background-color: rgb(255 255 255 / 63%);
     border-radius: 10px;
     margin: 15% auto;
     padding: 20px;
@@ -1019,11 +1014,13 @@ figure:hover img {
     max-width: 500px;
     text-align: center;
 }
-.popup-content h2{
+
+.popup-content h2 {
     font-size: large;
     text-align: center;
     font-family: sans-serif;
 }
+
 .close-btn {
     color: #039e32;
     display: flex;
@@ -1035,11 +1032,12 @@ figure:hover img {
 
 .close-btn:hover,
 .close-btn:focus {
-    color:purple;
+    color: purple;
     text-decoration: none;
     cursor: pointer;
 }
-.ubicacion{
+
+.ubicacion {
     margin: 20px;
     /* width: 100%; */
     text-align: center;
@@ -1047,7 +1045,8 @@ figure:hover img {
     overflow-x: hidden;
     border: 1px solid rgb(187, 238, 185);
 }
-.ubicacion_tittle{
+
+.ubicacion_tittle {
     font-family: sans-serif;
     margin: 10px;
 }
@@ -1056,12 +1055,14 @@ figure:hover img {
 #form-pqr .form-group {
     margin-bottom: 16px;
 }
+
 #form-pqr .form-row {
     display: flex;
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 #form-pqr .col {
     flex: 1 1 120px;
     min-width: 120px;
@@ -1070,12 +1071,14 @@ figure:hover img {
     align-items: flex-start;
     margin-bottom: 8px;
 }
+
 #form-pqr label {
     font-size: 1.4em;
     color: #039e32;
     margin-bottom: 4px;
     font-weight: bold;
 }
+
 #form-pqr .form-control {
     width: 100%;
     padding: 8px 10px;
@@ -1086,16 +1089,19 @@ figure:hover img {
     margin-bottom: 2px;
     transition: border 0.3s;
 }
+
 #form-pqr .form-control:focus {
     border: 2px solid #7b0580;
     outline: none;
     background: #eaffea;
 }
+
 #form-pqr textarea.form-control {
     resize: vertical;
     min-height: 80px;
     max-height: 200px;
 }
+
 #form-pqr .form-group.button-group {
     display: flex;
     gap: 10px;
@@ -1108,6 +1114,7 @@ figure:hover img {
         flex-direction: column;
         gap: 0;
     }
+
     #form-pqr .col {
         min-width: 100%;
         align-items: stretch;
