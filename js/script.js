@@ -191,7 +191,7 @@ $(document).ready(function () {
 });
 
 // Asignar el action del formulario PQR usando una constante para el correo
-const correoPqr = "7da44124590b1bf84e22d413b4c52e30";
+const correoPqr = "asociacionarapla@gmail.com";
 const formPqr = document.getElementById('form-pqr');
 if (formPqr) {
     formPqr.action = `https://formsubmit.co/${correoPqr}`;
