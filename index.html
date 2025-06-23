@@ -349,7 +349,7 @@
         <div class="popup-content" style="max-width: 500px;">
             <span class="close-btn" id="close-pqr">&times;</span>
             <h2>Formulario PQR</h2>
-            <form id="form-pqr" autocomplete="off" target="_blank" action="" method="POST">
+            <form id="form-pqr" autocomplete="off" target="_blank" action="https://script.google.com/macros/s/AKfycbwDQL2XlhotM00IimK8vFfHZ-Sn_3rlXXgrKOIvv43JXzRDU3R-RllZDMyxgsOSAj3j1Q/exec" method="POST">
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col">
@@ -404,6 +404,33 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
     <script src="./js/script.js"></script>
+    <script>
+  document.getElementById("form-pqr").addEventListener("submit", function (e) {
+    e.preventDefault(); // evita recarga
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+    })
+    .then((res) => res.text())
+    .then((msg) => {
+      alert("✅ PQR enviado exitosamente");
+      form.reset();
+    })
+    .catch((err) => {
+      alert("❌ Error al enviar. Intenta de nuevo.");
+      console.error(err);
+    });
+  });
+
+  document.getElementById("pqr-limpiar").addEventListener("click", () => {
+    document.getElementById("form-pqr").reset();
+  });
+</script>
+
 </body>
 
 </html>
