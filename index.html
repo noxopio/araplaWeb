@@ -349,7 +349,13 @@
         <div class="popup-content" style="max-width: 500px;">
             <span class="close-btn" id="close-pqr">&times;</span>
             <h2>Formulario PQR</h2>
-            <form id="form-pqr" autocomplete="off" target="_blank" action="https://script.google.com/macros/s/AKfycbwDQL2XlhotM00IimK8vFfHZ-Sn_3rlXXgrKOIvv43JXzRDU3R-RllZDMyxgsOSAj3j1Q/exec" method="POST">
+            <form 
+            id="form-pqr" 
+            autocomplete="off"
+             target="_blank"
+              <!-- action="https://script.google.com/macros/s/AKfycbwDQL2XlhotM00IimK8vFfHZ-Sn_3rlXXgrKOIvv43JXzRDU3R-RllZDMyxgsOSAj3j1Q/exec" 
+            method="POST" -->
+            >
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col">
@@ -404,6 +410,49 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
     <script src="./js/script.js"></script>
+    <script>
+  const correoPqr = "asociacionarapla@gmail.com"; // Tu correo real
+  const form = document.getElementById("form-pqr");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+
+    // Enviar a Formsubmit (correo)
+    const formSubmitPromise = fetch(`https://formsubmit.co/${correoPqr}`, {
+      method: "POST",
+      body: formData,
+    });
+
+    // Convertir FormData a objeto plano para Google Sheets
+    const dataObj = {};
+    formData.forEach((value, key) => dataObj[key] = value);
+
+    // Enviar a Google Sheets
+    const googleSheetsPromise = fetch("https://script.google.com/macros/s/AKfycbwDQL2XlhotM00IimK8vFfHZ-Sn_3rlXXgrKOIvv43JXzRDU3R-RllZDMyxgsOSAj3j1Q/exec", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dataObj),
+    });
+
+    // Esperar ambos
+    try {
+      await Promise.all([formSubmitPromise, googleSheetsPromise]);
+      alert("✅ Tu PQR fue enviado correctamente.");
+      form.reset();
+    } catch (err) {
+      alert("❌ Hubo un error al enviar el formulario.");
+      console.error(err);
+    }
+  });
+
+  // Botón limpiar
+  document.getElementById("pqr-limpiar").addEventListener("click", () => {
+    form.reset();
+  });
+</script>
+
   
 
 </body>
